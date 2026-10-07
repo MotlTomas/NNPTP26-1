@@ -1,4 +1,6 @@
-﻿namespace NNPTPZ1.Mathematics
+﻿using System;
+
+namespace NNPTPZ1.Mathematics
 {
     public class Complex
     {
@@ -58,6 +60,16 @@
                 Real = a.Real - b.Real,
                 Imaginary = a.Imaginary - b.Imaginary
             };
+        }
+
+        public double GetAbsoluteValue()
+        {
+            return Math.Sqrt(Real * Real + Imaginary * Imaginary);
+        }
+
+        public double GetAngleInRadians()
+        {
+            return Math.Atan2(Imaginary, Real);
         }
 
         public override string ToString()

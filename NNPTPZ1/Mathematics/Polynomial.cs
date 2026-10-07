@@ -47,6 +47,16 @@ namespace NNPTPZ1.Mathematics
         /// </summary>
         /// <param name="x">point of evaluation</param>
         /// <returns>y</returns>
+        public Complex Evaluate(double x)
+        {
+            return Evaluate(new Complex() { Real = x, Imaginary = 0 });
+        }
+
+        /// <summary>
+        /// Evaluates polynomial at given point
+        /// </summary>
+        /// <param name="x">point of evaluation</param>
+        /// <returns>y</returns>
         public Complex Evaluate(Complex x)
         {
             Complex result = Complex.Zero;
